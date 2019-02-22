@@ -1,0 +1,24 @@
+<h5>Edit this pet</h5>
+<form (submit)="editPet(updatedPet._id)">
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Pet Name:</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="name" [(ngModel)]="updatedPet.name">
+        <label for="exampleFormControlInput1">Pet Type:</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="type" [(ngModel)]="updatedPet.type">
+        <label for="exampleFormControlInput1">Description:</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="description"
+            [(ngModel)]="updatedPet.description">
+        <label for="exampleFormControlInput1">Skills 1:</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="skill_1" [(ngModel)]="updatedPet.skill_1">
+        <label for="exampleFormControlInput1">Skills 2:</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="skill_2" [(ngModel)]="updatedPet.skill_2">
+        <label for="exampleFormControlInput1">Skills 3:</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="skill_3" [(ngModel)]="updatedPet.skill_3">
+        <div *ngFor="let error of errors" class="error">
+            {{error}}
+        </div>
+        <p></p>
+        <button class="btn btn-primary" type="submit">Edit pet</button>
+        <button class="btn btn-primary" [routerLink]="['/pets']">Cancel</button>
+    </div>
+</form>

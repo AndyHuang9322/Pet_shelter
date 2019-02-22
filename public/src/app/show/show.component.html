@@ -1,0 +1,17 @@
+<h5>Details about {{selectPet.name}}</h5>
+<h6>Pet type:</h6>
+<p>{{selectPet.type}}</p>
+<p></p>
+<h6>Description:</h6>
+<p>{{selectPet.description}}</p>
+<p></p>
+<h6>Skills:</h6>
+<p>{{selectPet.skill_1}}</p>
+<p>{{selectPet.skill_2}}</p>
+<p>{{selectPet.skill_3}}</p>
+
+<h6>likes:</h6>
+<p>{{selectPet.likes}}</p>
+
+<button type="button" class="btn btn-outline-primary btn-sm" (click)="likePet(selectPet._id)" *ngIf="like==false">Like this pet</button>
+<button type="button" class="btn btn-outline-primary btn-sm" (click)="deletePet(selectPet._id)">Adopt this pet</button>

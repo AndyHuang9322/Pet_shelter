@@ -1,0 +1,23 @@
+<h5>Know of a pet needing a home?</h5>
+<form (submit)="createPet()">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Pet Name:</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="name" [(ngModel)]="newPet.name">
+      <label for="exampleFormControlInput1">Pet Type:</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="name" [(ngModel)]="newPet.type">
+      <label for="exampleFormControlInput1">Description:</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="name" [(ngModel)]="newPet.description">
+      <label for="exampleFormControlInput1">Skills 1:</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="name" [(ngModel)]="newPet.skill_1">
+      <label for="exampleFormControlInput1">Skills 2:</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="name" [(ngModel)]="newPet.skill_2">
+      <label for="exampleFormControlInput1">Skills 3:</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="name" [(ngModel)]="newPet.skill_3">
+      <div *ngFor="let error of errors" class="error">
+        {{error}}
+      </div>
+      <p></p>
+      <button class="btn btn-primary" type="submit">Add pet</button>
+      <button class="btn btn-primary" [routerLink]="['/pets']">Cancel</button>
+    </div>
+  </form>
